@@ -53,13 +53,17 @@ module.exports = {
     new ExtractTextPlugin('style.css', {
       allChunks: true
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({ "global.GENTLY": false })
   ],
 
   watch: true, // use webpacks watcher
   // You need to keep the grunt process alive
 
-  keepalive: true // don't finish the grunt task
+  keepalive: true, // don't finish the grunt task
   // Use this in combination with the watch option
+  node: {
+    __dirname: true,
+  }
 
 };

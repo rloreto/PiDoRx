@@ -2,6 +2,15 @@ var React = require('react');
 var Router = require('react-router');
 var { Route, RouteHandler, Link } = Router;
 require('./sass/app/main.scss');
+var request =require('superagent/lib/client');
+debugger;
+
+request
+  .get('http://10.0.2.2/api/components')
+  .set('Accept', 'application/json')
+  .end(function(err, res){
+    debugger;
+  });
 
 var App = React.createClass({
 
