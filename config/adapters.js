@@ -3,7 +3,7 @@ module.exports.adapters = {
 
   mongo: {
     module: 'sails-mongo',
-    host: 'localhost',
+    host: '10.0.2.2',
     port: 27017,
     database: 'PiDo'
   }

@@ -1,17 +1,25 @@
 {
-  "name": "webpack",
+  "name": "PiDo",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
   "keywords": [],
   "dependencies": {
     "array.prototype.find": "^1.0.0",
+    "babel": "^6.3.26",
+    "babel-loader": "^6.2.1",
     "babelify": "^6.1.3",
     "bcryptjs": "^2.3.0",
     "bluebird": "^2.9.24",
+    "bower-webpack-plugin": "^0.1.9",
+    "css-loader": "^0.23.1",
     "ejs": "~0.8.4",
     "epoll": "^0.1.16",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
     "grunt": "0.4.2",
+    "grunt-bower": "^0.20.0",
+    "grunt-bower-install-simple": "^1.2.0",
     "grunt-browserify": "^3.8.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-coffee": "~0.10.1",
@@ -25,6 +33,7 @@
     "grunt-react": "^0.12.2",
     "grunt-sails-linker": "~0.9.5",
     "grunt-sync": "~0.0.4",
+    "grunt-webpack": "^1.0.11",
     "include-all": "~0.1.3",
     "lodash": "^4.0.0",
     "node-promise": "^0.5.12",
@@ -34,8 +43,11 @@
     "passport-local": "^1.0.0",
     "pluralize": "^1.1.2",
     "rc": "~0.5.0",
-    "react": "^0.13.3",
-    "react-router": "^0.13.3",
+    "react-addons-css-transition-group": "^0.14.0",
+    "react-addons-test-utils": "0.14.0",
+    "react-dom": "^0.14.6",
+    "react-router": "^2.0.0-rc5",
+    "react-static-container": "^1.0.0",
     "request-promise": "^0.4.2",
     "sails": "~0.11.0",
     "sails-disk": "~0.10.0",
@@ -44,8 +56,10 @@
     "sails-react-store": "^1.0.9",
     "sleep": "^3.0.0",
     "socket.io": "^1.3.5",
+    "style-loader": "^0.13.0",
+    "superagent": "^1.6.1",
     "validator": "^4.5.0",
-    "webpack": "^1.12.1",
+    "webpack": "^1.12.11",
     "winston": "^1.0.1"
   },
   "scripts": {
@@ -54,16 +68,20 @@
     "postinstall": "grunt&npm start"
   },
   "main": "app.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/anonymous node/sails user/webpack.git"
-  },
   "author": "anonymous node/sails user",
   "license": "",
   "devDependencies": {
+    "babel": "^6.3.26",
+    "babel-core": "^6.4.0",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
     "extract-text-webpack-plugin": "^1.0.1",
+    "grunt-bower": "^0.20.0",
+    "grunt-bower-task": "^0.4.0",
+    "grunt-webpack": "^1.0.11",
     "node-sass": "^3.4.2",
     "sass-loader": "^3.1.2",
-    "superagent": "^1.6.1"
+    "webpack": "^1.12.11"
   }
 }

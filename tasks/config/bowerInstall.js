@@ -4,7 +4,7 @@ module.exports = function (grunt) {
 
     options: {
       color: true,
-      directory: "bower_components"
+      directory: "assets/bower_components"
     },
     "prod": {
       options: {

@@ -13,7 +13,8 @@ module.exports = function(grunt) {
 
 	grunt.config.set('clean', {
 		dev: ['.tmp/public/**'],
-		build: ['www']
+		build: ['www'],
+		bower: ['.tmp/public/bower_components/**']
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-clean');

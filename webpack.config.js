@@ -7,7 +7,7 @@ var loaders = ['babel-loader'];
 
 module.exports = {
   entry: {
-    bundle:['./src_client/app.js']
+    bundle:['./src_client/index.jsx']
   },
   output: {
     // Absolute output directory
@@ -25,7 +25,7 @@ module.exports = {
     preLoaders: [],
     loaders: [
     {
-      test: /\.js?$/,
+      test: /[\.jsx|\.js]$/,
       exclude: /(node_modules|bower_components)/,
       loader: 'babel',
       query: {
@@ -40,6 +40,7 @@ module.exports = {
   ]
   },
   resolve: {
+     root: [path.join(__dirname, "bower_components")],
     modulesDirectories: ['node_modules',
                          'bower_components',
                           path.join('src_client'),
@@ -54,7 +55,10 @@ module.exports = {
       allChunks: true
     }),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({ "global.GENTLY": false })
+    new webpack.DefinePlugin({ "global.GENTLY": false }),
+    new webpack.ResolverPlugin(
+        new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+    )
   ],
 
   watch: true, // use webpacks watcher
@@ -64,6 +68,9 @@ module.exports = {
   // Use this in combination with the watch option
   node: {
     __dirname: true,
+  },
+  externals: {
+  'React': 'React'
   }
 
 };
